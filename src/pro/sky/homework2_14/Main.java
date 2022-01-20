@@ -1,8 +1,39 @@
 package pro.sky.homework2_14;
 
+import pro.sky.homework2_14.stringlist.StringList;
+import pro.sky.homework2_14.stringlist.StringListImpl;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-
+        StringList stringList = new StringListImpl();
+        System.out.println(stringList.add("Sergei"));
+        System.out.println(stringList.getSize());
+        System.out.println(stringList.add("Olga"));
+        System.out.println(stringList.getSize());
+        System.out.println(stringList.contains("Sergei"));
+        System.out.println(stringList.remove("Sergei"));
+        System.out.println(stringList.contains("Sergei"));
+        System.out.println(stringList.getSize());
+        System.out.println(stringList.add("Bob"));
+        System.out.println(stringList.indexOf("Bob"));
+        System.out.println(stringList.lastIndexOf("Bob"));
+        System.out.println(stringList.indexOf("Olga"));
+        System.out.println(stringList.set(1, "Tom"));
+        System.out.println(stringList.contains("Bob"));
+        System.out.println(Arrays.toString(stringList.toArray()));
+        System.out.println(stringList.remove(1));
+        System.out.println(stringList.contains("Tom"));
+        System.out.println(stringList.getSize());
+        System.out.println(stringList.add(0, "Anna"));
+        System.out.println(Arrays.toString(stringList.toArray()));
+        StringList stringList2 = new StringListImpl();
+        stringList2.add(("Olga"));
+        stringList2.add(("Bob"));
+        System.out.println(stringList.equals(stringList2));
+        stringList.clear();
+        System.out.println(stringList.getSize());
     }
 }
 /*
